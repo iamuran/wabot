@@ -1,0 +1,20 @@
+import pywhatkit as kit
+import time
+import keyboard 
+
+# List of phone numbers (include country code, e.g., "+1234567890")
+contacts = [
+    "+77474682404", "+77716134607"
+]
+
+
+# Message to send
+message = "Hi, my name is Uran"
+
+# main function
+for contact in contacts:
+    kit.sendwhatmsg_instantly(contact, message, wait_time=10)
+    print(f"Message sent to {contact}")
+    time.sleep(5)  
+    keyboard.press_and_release("ctrl + w") 
+    time.sleep(5)  
